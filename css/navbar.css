@@ -1,0 +1,59 @@
+
+
+/* NAV-BAR */
+
+.ciseau {
+    background-image: url(../image/ciseau-ouvert.svg);
+    background-repeat: no-repeat;
+    width: 200px;
+    background-size: 100%;
+    margin-top: 20px;
+}
+
+.ciseau:hover {
+    background: url("../image/ciseaux-fermer.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 20px;
+    transition: 2s;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(241,127,66,0.8));
+    border-radius: 20px 20px 0 0;
+}
+
+nav>ul {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    list-style: none;
+    font-weight: bold;
+    font-size: 3vw;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+nav>ul>li {
+    vertical-align: middle;
+    grid-row-start: 2;
+    font-family: 'alex_brushregular', sans-serif;
+    margin-left: 40px;
+    color: black;
+}
+
+.link {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    list-style-type: unset;
+    font-size: 1.8vw;
+    transition: all 2s ease; /* transition sur visibility et opacity */
+}
+
+.tuto:hover>.link {
+    visibility: visible;
+    opacity: 1;
+}
